@@ -66,7 +66,7 @@ export const WHY = [
 ] as const;
 
 export const STEPS = [
-  ["Pick Your Shopify App", "Start where your store leaks revenue: small carts, bouncing traffic, one-time buyers or wholesale enquiries stuck in email. Three of our apps are free forever and the rest have free trials, so picking wrong costs you nothing."],
+  ["Pick Your Shopify App", "Start where your store leaks revenue: small carts, bouncing traffic, one-time buyers or wholesale enquiries stuck in email. Explore the free plans and trial options on each app's pricing page to find the right fit."],
   ["Install From the Shopify App Store", "The same one-click install flow as every app you already run. We use Shopify's theme app extensions, so nothing touches your theme code and uninstalling leaves no leftovers behind."],
   ["Configure in Your Theme Editor", "Style everything inside the Shopify Theme Editor with a live preview of your own storefront, not a mockup. Publish when it looks right and watch the first conversions land the same day."],
 ] as const;
@@ -94,7 +94,7 @@ export const REVIEWS: [string, string, string, string][] = [
 
 export const FAQ = [
   ["Which Objects app should I install first?", "Start with the one that matches your biggest leak. If traffic bounces without buying, use Spin Wheel or Popup & Disclaimer. If orders are too small, use Smart Variant Table. If customers buy once and vanish, use myCred Loyalty Points. If wholesale buyers email you for pricing, use B2B Request Quote. If you're unsure, message us and we'll tell you which one fits, even if the answer is none of them."],
-  ["Are these apps really free, or is it a limited trial?", "Three are genuinely free forever: Smart Product Wishlist, Smart Variant Table and myCred Loyalty Points. Those free plans run a real program, not a preview. The other six start with a free trial between 3 and 14 days."],
+  ["Are these apps really free, or is it a limited trial?", "Smart Product Wishlist, Smart Variant Table, myCred Loyalty Points and Zyga Bundles offer free plans. Check each app's pricing page for the included features, paid plans and available trial options."],
   ["Will these apps slow my storefront down?", "Our apps use Shopify's theme app extensions and load only what a given page needs, rather than injecting a global script on every route. Core Web Vitals affect both your conversion rate and your search ranking, so app weight is something we treat as a feature, not an afterthought."],
   ["Do I need a developer to install them?", "No. Every app installs in one click from the Shopify App Store and is configured in the Shopify Theme Editor with a live preview. You never edit theme code, and nothing we add is destructive."],
   ["Will they work with my theme?", "Yes. Our apps are built against Shopify's Online Store 2.0 standards and are used on Dawn, Studio, Sense, Refresh and a long tail of paid and custom themes."],

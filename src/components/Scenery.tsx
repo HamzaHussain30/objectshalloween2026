@@ -7,16 +7,16 @@ export function Pumpkin({ className, style }: P) {
     <svg viewBox="0 0 120 104" className={className} style={style} aria-hidden>
       <defs>
         <radialGradient id="pk" cx="50%" cy="40%" r="70%">
-          <stop offset="0" stopColor="#ffa23a" />
-          <stop offset="0.7" stopColor="#f2670c" />
-          <stop offset="1" stopColor="#b8420a" />
+          <stop offset="0" stopColor="var(--pumpkin-hot)" />
+          <stop offset="0.7" stopColor="var(--pumpkin)" />
+          <stop offset="1" stopColor="#a13e0b" />
         </radialGradient>
       </defs>
-      <path d="M56 18c0-8 5-14 15-15l2 6c-7 1-9 4-9 9z" fill="#4a6b24" />
+      <path d="M56 18c0-8 5-14 15-15l2 6c-7 1-9 4-9 9z" fill="var(--line)" />
       <ellipse cx="32" cy="62" rx="27" ry="36" fill="url(#pk)" />
       <ellipse cx="88" cy="62" rx="27" ry="36" fill="url(#pk)" />
       <ellipse cx="60" cy="60" rx="31" ry="40" fill="url(#pk)" />
-      <path d="M60 22v76M42 26c-6 20-6 52 0 70M78 26c6 20 6 52 0 70" stroke="#b8420a" strokeOpacity=".45" strokeWidth="2" fill="none" />
+      <path d="M60 22v76M42 26c-6 20-6 52 0 70M78 26c6 20 6 52 0 70" stroke="#a13e0b" strokeOpacity=".45" strokeWidth="2" fill="none" />
       <g fill="#ffe39a" style={{ filter: "drop-shadow(0 0 6px #ffb340)" }}>
         <path d="M36 54l14-2-6-14z" />
         <path d="M84 54l-14-2 6-14z" />
@@ -80,7 +80,7 @@ export function HeroScene({ className, percent }: P & { percent?: number }) {
         )}
 
         {/* hills */}
-        <path fill="#2a1848" d="M-3000 700H0C240 640 420 700 660 690S1000 640 1440 690V900H-3000z" />
+        <path fill="var(--surface)" d="M-3000 700H0C240 640 420 700 660 690S1000 640 1440 690V900H-3000z" />
         <path fill="#1a0f30" d="M820 770C940 690 1100 680 1240 702c100 14 160 40 200 52V900H820z" />
 
         {/* haunted house */}
@@ -121,7 +121,7 @@ export function HeroScene({ className, percent }: P & { percent?: number }) {
           <ellipse cx="1372" cy="846" rx="56" ry="26" />
           <ellipse cx="250" cy="836" rx="60" ry="28" />
         </g>
-        <g fill="#ff7a1a" filter="url(#glow)">
+        <g fill="var(--pumpkin)" filter="url(#glow)">
           {EYES.map(([x, y]) => (
             <g key={x}>
               <path d={`M${x - 24} ${y}q9-11 19-1-9 4-19 1z`} />
@@ -131,7 +131,7 @@ export function HeroScene({ className, percent }: P & { percent?: number }) {
         </g>
       </svg>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-violet/25 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-pumpkin/25 to-transparent" />
       {/* foreground pumpkins */}
       <Pumpkin className="flicker absolute bottom-[3%] left-[4%] w-24 md:h-[16vh] md:w-auto" />
       <Pumpkin className="flicker absolute bottom-[1%] left-[22%] hidden md:block md:h-[9vh] md:w-auto" style={{ animationDelay: "-1s" }} />
@@ -156,7 +156,7 @@ export function Spider({ className, style }: P) {
   return (
     <svg viewBox="0 0 40 90" className={className} style={style} aria-hidden>
       <path d="M20 0v52" stroke="currentColor" strokeWidth="1" opacity=".6" />
-      <g fill="#1a1026" stroke="#a78bfa" strokeWidth="1.2">
+      <g fill="var(--ink)" stroke="var(--pumpkin-hot)" strokeWidth="1.2">
         <ellipse cx="20" cy="62" rx="7" ry="8" />
         <circle cx="20" cy="52" r="4.5" />
         <path d="M13 60l-9-6M13 64l-10 2M13 68l-8 8M27 60l9-6M27 64l10 2M27 68l8 8" fill="none" />
@@ -169,15 +169,15 @@ export function Spider({ className, style }: P) {
 export function Graveyard({ className }: P) {
   return (
     <svg viewBox="0 0 1440 260" preserveAspectRatio="none" className={className} aria-hidden>
-      <path fill="#2a1848" d="M0 150c200-50 360-20 540 10s360 40 520-10 260-30 380 0v110H0z" />
-      <g fill="#0f0819">
+      <path fill="var(--surface)" d="M0 150c200-50 360-20 540 10s360 40 520-10 260-30 380 0v110H0z" />
+      <g fill="var(--ink)">
         <path d="M0 200c160-30 320-10 480 5s300 10 480-15 330-5 480 15v55H0z" />
         {/* dead tree, left */}
         <path d="M118 210l6-120-22-38 12 4-6-24 12 20 4-30 6 32 20-26-12 34 24-6-26 22 4 132z" />
-        <path d="M122 120l-40-26M126 100l34-34M122 150l40-20" stroke="#0f0819" strokeWidth="5" fill="none" />
+        <path d="M122 120l-40-26M126 100l34-34M122 150l40-20" stroke="var(--ink)" strokeWidth="5" fill="none" />
         {/* dead tree, right */}
         <path d="M1296 210l-5-110 18-30-10 3 5-22-10 18-3-27-5 30-17-22 10 31-21-6 22 19-3 116z" />
-        <path d="M1294 110l36-24M1292 140l-34-18" stroke="#0f0819" strokeWidth="5" fill="none" />
+        <path d="M1294 110l36-24M1292 140l-34-18" stroke="var(--ink)" strokeWidth="5" fill="none" />
         {/* tombstones */}
         <path d="M300 214v-48a20 20 0 0 1 40 0v48z" />
         <path d="M420 214v-34a16 16 0 0 1 32 0v34z" />

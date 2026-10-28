@@ -1,0 +1,56 @@
+﻿{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T13:09:08Z",
+  "title": "Design System: Objects Halloween",
+  "extensions": {
+    "colorMeta": {
+      "ink": {"role": "neutral", "displayName": "Objects ink"},
+      "pumpkin": {"role": "primary", "displayName": "Objects orange"},
+      "action": {"role": "primary", "displayName": "White-text CTA backing"}
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Direct sale headline", "purpose": "Centered sentence-case DM Sans hero."},
+      "headline": {"displayName": "Section heading", "purpose": "Centered practical section introductions; 3rem at small and above."}
+    },
+    "shadows": [],
+    "motion": [
+      {"name": "dangle", "value": "4s ease-in-out infinite", "purpose": "Contact spider translates down 10px at midpoint."},
+      {"name": "flicker", "value": "3s ease-in-out infinite", "purpose": "Footer pumpkins vary brightness from .9 to 1.15."},
+      {"name": "hover", "value": "200ms to 500ms", "purpose": "Card borders, featured preview scale and contact/featured lift."},
+      {"name": "reduced-motion", "value": "Decorative animations disabled; scroll-behavior:auto", "purpose": "Existing source preference handling; utility hover transitions remain."}
+    ],
+    "breakpoints": [
+      {"name": "sm", "value": "640px"},
+      {"name": "md", "value": "768px"},
+      {"name": "lg", "value": "1024px"},
+      {"name": "xl", "value": "1280px"},
+      {"name": "hero-wide", "value": "1440px"}
+    ],
+    "verification": {
+      "basis": "Current page.tsx, globals.css, layout.tsx and AppCard.tsx source.",
+      "renderedLayout": "Unverified: no available browser or screenshots.",
+      "reportedChecks": "Implementing agent reports targeted ESLint passed, source review found no regression, assets exist, and localhost:3010 HTTP 200 serves the forest and October 29. Full build and targeted ESLint passed after final cleanup.",
+      "heroAsset": "public/hero/forest.png",
+      "removedAssets": "Rejected generated ghost raster, its prompt sidecar and unused AppCollection are removed."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "White label on darker action orange; general section CTA.",
+      "html": "<a class=\"action\" href=\"#apps\">Browse All Apps</a>",
+      "css": ".action{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:.75rem;padding:.875rem 1.75rem;background:var(--action,#ba4209);color:#fff;font:700 1rem var(--font-body,system-ui,sans-serif);text-decoration:none;transition:background-color .15s}.action:hover{background:var(--action-hover,#a83806)}.action:focus-visible{outline:2px solid var(--pumpkin-hot,#ff8b50);outline-offset:3px;border-radius:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Original forest design foundation",
+    "overview": "Centered forest hero, DM Sans and original navigation support direct sale copy and practical app browsing. Existing product screenshots lead the collection. The user preferred this original foundation and rejected the theatrical campaign redesign.",
+    "keyCharacteristics": ["Direct copy", "Screenshot-led app cards", "Dark Objects palette with orange emphasis"],
+    "rules": [{"name": "White CTA labels", "body": "Keep CTA labels white with the darker action backing.", "section": "colors"}],
+    "dos": ["Retain the original centered forest foundation.", "Use actual product screenshots and clear price comparisons.", "Keep 26% off and October 29 consistent with sale data."],
+    "donts": ["Do not restore the ghost mascot, condensed slogans, discount stamp, ticker or staggered cards.", "Do not repeat use-case/WHY/friction sections.", "Do not invent a coupon, end date or ending countdown.", "Do not claim rendered verification without browser evidence."]
+  }
+}
+
